@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+header {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+header h1 {
+  color: hsl(212, 6%, 44%);
+  font-weight: 200;
+}
+
+header h2 {
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: hsl(212, 6%, 44%);
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "start mid1 end"
+    "start mid2 end";
+  column-gap: 2rem;
+  row-gap: 2rem;
+  margin: 3rem 8% 0;
+}
+
+.supervisor-card {
+  grid-area: start;
+  align-self: center;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 0.5rem solid hsl(180, 62%, 55%);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-builder-card {
+  grid-area: mid1;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 0.5rem solid hsl(0, 78%, 62%);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.karma-card {
+  grid-area: mid2;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 0.5rem solid hsl(34, 97%, 64%);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-card {
+  grid-area: end;
+  align-self: center;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 0.5rem solid hsl(212, 86%, 64%);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  display: grid;
+  justify-content: right;
+  padding-top: 2rem;
+}
+
+.attribution {
+  margin-top: 4rem;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+@media (max-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "start mid1"
+      "mid2 end";
+  }
+}
+
+@media (max-width: 32rem) {
+  header {
+    width: 100%;
+  }
+
+  .cards {
+    display: block;
+  }
+
+  .supervisor-card,
+  .team-builder-card,
+  .karma-card {
+    margin-bottom: 2rem;
+  }
+}
